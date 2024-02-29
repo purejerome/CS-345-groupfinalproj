@@ -18,3 +18,6 @@ Please consult the project requirements [here](https://w3.cs.jmu.edu/cs343/s24/p
 ## Publishing
 
 After uploading files to your repo, follow these instructions to publish it using GitHub pages: [Publishing from a branch](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch)
+
+## Authors
+1. Nick Hamilton
