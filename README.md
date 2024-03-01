@@ -22,3 +22,4 @@ After uploading files to your repo, follow these instructions to publish it usin
 ## Authors
 1. Nick Hamilton
 2. Nicky Miller
+3. Jerome Donfack
