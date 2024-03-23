@@ -1,5 +1,5 @@
 section {
-    height: 25rem;
+    height: 80vh;
     margin: 1rem 0 5rem 0;
 }
 
@@ -27,28 +27,28 @@ section {
 .prev-button {
     position: absolute;
     width: 5%;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.0);
     border: 0;
     height: 90%;
-    background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.1));
+    background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.6));
 }
 
 .prev-button:hover {
-    background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.7));
 }
 
 .next-button {
     position: absolute;
     width: 5%;
     right: 0;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.0);
     border: 0;
     height: 90%;
-    background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1));
+    background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.6));
 }
 
 .next-button:hover {
-    background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.7));
 }
 
 button img {
@@ -62,8 +62,4 @@ button img {
 
 .gone {
     display: none;
-}
-
-.vigentteGone {
-    background-image: none;
 }

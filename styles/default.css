@@ -1,3 +1,44 @@
 body {
     margin: 0;
 }
+
+::-webkit-scrollbar {
+    width: 15px;
+    position: absolute;
+    right: 0;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    display: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 6px;
+    margin: 10px;
+}
+
+/* ::-webkit-scrollbar {
+    width: 0;
+}
+
+.scroll-path {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 13px;
+    height: 100%;
+    background-color: rgba(189, 189, 189, 0.352);
+    z-index: 1;
+}
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 13px;
+    height: 100%;
+    z-index: 2;
+    background-color: black;
+} */

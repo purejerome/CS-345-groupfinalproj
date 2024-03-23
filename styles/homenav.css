@@ -1,0 +1,50 @@
+header {
+    width: 100%;
+    display: flex;
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+    background-color: black;
+}
+
+#left-side {
+    flex-grow: 1;
+    border-width: 2px;
+    border-style: solid;
+}
+
+#left-side form input {
+    width: 70%;
+    height: 3rem;
+    margin: 1rem 0;
+    margin-left: 1rem;
+    border-radius: 100px;
+    border-width: 0;
+    padding-left: 20px;
+    font-size: 1.6rem;
+    box-shadow: black;
+}
+
+#left-side form input:focus {
+    outline: none;
+}
+
+::-webkit-search-cancel-button {
+    appearance: none;
+}
+
+#left-side a {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: 2rem;
+}
+
+#left-side nav {
+    margin-bottom: 1rem;
+}
+
+#right-side {
+    flex-basis: 20%;
+    border-width: 2px;
+    border-style: solid;
+}
