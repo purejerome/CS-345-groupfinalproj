@@ -1,6 +1,6 @@
 section {
-    height: 80vh;
-    margin: 1rem 0 5rem 0;
+    height: 60vh;
+    margin: 1rem 0 12rem 0;
 }
 
 .carousel {
@@ -62,4 +62,8 @@ button img {
 
 .gone {
     display: none;
+}
+
+#last-section {
+    margin-bottom: 1rem;
 }

@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: rgb(84, 164, 255);
 }
 
 ::-webkit-scrollbar {
@@ -9,14 +10,35 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent;
+    background: white;
     display: hidden;
 }
 
 ::-webkit-scrollbar-thumb {
     background: gray;
-    border-radius: 6px;
+    border-radius: 8px;
     margin: 10px;
+    border-color: white;
+    border-style: solid;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-left: 1rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.434);
+    text-decoration: underline;
 }
 
 /* ::-webkit-scrollbar {
