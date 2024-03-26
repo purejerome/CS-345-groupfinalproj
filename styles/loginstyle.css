@@ -1,0 +1,111 @@
+body {
+    padding: 0px;
+    padding-left:10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    margin: 0px;
+    
+}
+
+.theNav {
+    grid-area: nav;
+    background-color:aqua;
+    padding: 0px;
+    margin: 0px;
+    height: 5vh;
+}
+
+.imageLeft {
+    grid-area: imgLeft;
+    padding: 0px;
+    margin: 0px;
+    width: 950px;
+    mask-image: linear-gradient(to right, blueviolet, transparent);
+    /* background: linear-gradient(to right, transparent, blueviolet),
+        url(images/bear1.jpg) */
+}
+
+.imageLeft img {
+    height: 90vh;
+}
+
+.login {
+    grid-area: rightContent;
+    padding: 0px;
+    margin: 0px;
+}
+
+.login form button {
+    margin-left: 100px;
+}
+
+.login form {
+    text-align: center;
+    margin-top: 25%;
+}
+
+.imageLeft, .login {
+    height: 90vh;
+}
+
+.theFooter {
+    grid-area: footer;
+    background-color:aquamarine;
+    padding: 0px;
+    margin: 0px;
+}
+.wrapper {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+        "nav"
+        "rightContent"
+        "imgLeft"
+        "footer";
+}
+
+@media (min-width: 375px) {
+    .wrapper {
+        grid-template-columns: 40% 60%;
+        grid-gap: 0px;
+        grid-template-areas:
+            "nav     nav"
+            "imgLeft rightContent"
+            "footer      footer";
+        }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: blueviolet;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: rgb(84, 164, 255);
+    }
+}
+
+a:link {
+    color: red;
+
+}
+
+a:hover {
+    color:lime;
+}
+
+a:visited {
+    color:black;
+}
+
+a:active {
+    color: blue;
+}
+
+.theFooter {
+    height: 5vh;
+    text-align: center;
+}
+
