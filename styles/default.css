@@ -1,6 +1,7 @@
 body {
     margin: 0;
     background-color: rgb(84, 164, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -25,6 +26,7 @@ body {
 h2 {
     font-size: 3rem;
     margin-left: 1rem;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 a {
