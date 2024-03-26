@@ -17,6 +17,18 @@ main {
     flex-direction: column;
 }
 
+@media screen and (prefers-color-scheme: dark) {
+    .login {
+        background: linear-gradient(to left, blueviolet 40%, transparent 100%);
+    }
+}
+
+@media screen and (prefers-color-scheme: light) {
+    .login {
+        background: linear-gradient(to left, rgb(84, 164, 255) 40%, transparent 100%);
+    }
+}
+
 .login {
     position: absolute;
     top: 0;
@@ -29,7 +41,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to left, rgb(84, 164, 255) 40%, transparent 100%);
     z-index: 0;
 }
 
@@ -113,9 +124,19 @@ main {
 } */
 
 @media screen and (max-width: 778px) {
-    .login {
-        background: linear-gradient(to bottom, rgb(84, 164, 255) 40%, transparent 100%);
+    @media screen and (prefers-color-scheme: dark) {
+        .login {
+            background: linear-gradient(to bottom, blueviolet 40%, transparent 100%);
+        }
+    }
 
+    @media screen and (prefers-color-scheme: light) {
+        .login {
+            background: linear-gradient(to bottom, rgb(84, 164, 255) 40%, transparent 100%);
+        }
+    }
+
+    .login {
         flex-direction: row;
         align-items: start;
         width: 100vw;
@@ -126,18 +147,6 @@ main {
         margin-top: 2rem; */
         margin: 0;
         margin-top: 2rem;
-    }
-}
-
-@media screen and (prefers-color-scheme: dark) {
-    body {
-        background-color: blueviolet;
-    }
-}
-
-@media screen and (prefers-color-scheme: light) {
-    body {
-        background-color: rgb(84, 164, 255);
     }
 }
 
