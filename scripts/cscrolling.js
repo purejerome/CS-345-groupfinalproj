@@ -44,9 +44,11 @@ function rightClick(event) {
 }
 for (let l of lefts) {
     l.addEventListener('click', leftClick);
+    l.addEventListener('touchend', leftClick);
 }
 for (let r of rights) {
     r.addEventListener('click', rightClick);
+    r.addEventListener('touchend', rightClick);
 }
 for (let c of carousels) {
     const left = c.closest('.prev-button');
