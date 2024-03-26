@@ -48,6 +48,11 @@ figcaption {
     user-select: none;
 }
 
+figcaption:active {
+    opacity: 1;
+    backdrop-filter: blur(0.7px) saturate(90%);
+}
+
 figcaption:hover {
     opacity: 1;
     backdrop-filter: blur(0.7px) saturate(90%);
