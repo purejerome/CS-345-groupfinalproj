@@ -19,7 +19,7 @@ body {
     grid-area: imgLeft;
     padding: 0px;
     margin: 0px;
-    width: 950px;
+    width: 55vw;
     mask-image: linear-gradient(to right, blueviolet, transparent);
     /* background: linear-gradient(to right, transparent, blueviolet),
         url(images/bear1.jpg) */
@@ -27,12 +27,15 @@ body {
 
 .imageLeft img {
     height: 90vh;
+    width: 55vw;
 }
 
 .login {
     grid-area: rightContent;
     padding: 0px;
     margin: 0px;
+    padding-left: 15vw;
+    width: 45vw;
 }
 
 .login form button {
@@ -47,6 +50,7 @@ body {
 .imageLeft, .login {
     height: 90vh;
 }
+
 
 .theFooter {
     grid-area: footer;
