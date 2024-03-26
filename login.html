@@ -6,33 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="styles/loginstyle.css" rel="stylesheet">
-    <script src="scripts/loginScript.js"></script>
 </head>
 
 <body>
-    <div class="wrapper">
+    <header>
+        <nav class="theNav">
+            This may be a suitable place for a Nav bar or we can put it in the header.
+        </nav>
+    </header>
+    <main>
         <!-- <header class="theHeader"> Adding Header to Grid Area messes everything up
         <p>Welcome to the Header</p>
     </header> -->
-        <nav class="theNav">
-            <p>This may be a suitable place for a Nav bar or we can put it in the header.</p>
-        </nav>
         <section class="imageLeft">
-            <a href="https://store.steampowered.com/"><img src="images/tempCollage.jpg"
-                    alt="Collage of Game Thumbnails"></a>
+            <a href="https://store.steampowered.com/"><span>invis</span></a>
+            <!-- <a href="https://store.steampowered.com/"><img src="images/tempCollage.jpg"
+                    alt="Collage of Game Thumbnails"></a> -->
         </section>
         <section class="login">
             <form action="#" method="get">
-                <p>User Name = <input type="text" id="user" name="userName" placeholder="enter username"></p>
-                <p>Password = <input type="text" id="pass" name="passWord" placeholder="enter password"></p>
+                <p>User Name = <input type="text" id="user" name="userName"
+                        placeholder="enter username"></p>
+                <p>Password = <input type="text" id="pass" name="passWord"
+                        placeholder="enter password"></p>
                 <button type="submit">Get Reviewing!</button>
                 <p>Don't have an account with us? <a href="register.html">Click Me!</a></p>
             </form>
         </section>
-        <footer class="theFooter">
-            <p>Enjoy creating some Reviews!</p>
-        </footer>
-    </div>
+    </main>
+    <script src="scripts/loginScript.js"></script>
 </body>
 
 </html>

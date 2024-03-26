@@ -1,42 +1,75 @@
 body {
-    padding: 0px;
-    padding-left:10px;
-    padding-right: 10px;
-    padding-bottom: 0px;
-    margin: 0px;
-    
+    height: 100vh;
+    max-width: 100vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* overflow: hidden; */
+}
+
+main {
+    position: relative;
+    flex-grow: 1;
+    /* max-width: 100%;
+    max-height: 100%; */
+    display: flex;
+    flex-direction: column;
+}
+
+.login {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 150vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, rgb(84, 164, 255) 40%, transparent 100%);
+    z-index: 0;
+}
+
+.login form {
+    width: fit-content;
+    margin-left: 30rem;
 }
 
 .theNav {
-    grid-area: nav;
-    background-color:aqua;
-    padding: 0px;
-    margin: 0px;
+    background-color: aqua;
+    padding: 0;
+    margin: 0;
     height: 5vh;
 }
 
 .imageLeft {
-    grid-area: imgLeft;
-    padding: 0px;
-    margin: 0px;
-    width: 55vw;
-    mask-image: linear-gradient(to right, blueviolet, transparent);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/tempCollage.jpg');
+    position: relative;
     /* background: linear-gradient(to right, transparent, blueviolet),
         url(images/bear1.jpg) */
 }
 
-.imageLeft img {
-    height: 90vh;
-    width: 55vw;
+.imageLeft span {
+    display: none;
 }
 
-.login {
-    grid-area: rightContent;
-    padding: 0px;
-    margin: 0px;
-    padding-left: 15vw;
-    width: 45vw;
+.imageLeft a {
+    display: block;
+    height: 100%;
+    width: 100%;
 }
+
+/* a img {
+    display: block;
+    height: 100%;
+    width: 90%;
+} */
 
 .login form button {
     margin-left: 100px;
@@ -44,22 +77,21 @@ body {
 
 .login form {
     text-align: center;
-    margin-top: 25%;
 }
 
-.imageLeft, .login {
+/* .imageLeft,
+.login {
     height: 90vh;
-}
+} */
 
 
-.theFooter {
-    grid-area: footer;
-    background-color:aquamarine;
+/* .theFooter {
+    background-color: aquamarine;
     padding: 0px;
     margin: 0px;
-}
+} */
 
-.wrapper {
+/* .wrapper {
     display: grid;
     gap: 20px;
     grid-template-areas:
@@ -67,9 +99,9 @@ body {
         "rightContent"
         "imgLeft"
         "footer";
-}
+} */
 
-@media (min-width: 375px) {
+/* @media (min-width: 375px) {
     .wrapper {
         grid-template-columns: 40% 60%;
         grid-gap: 0px;
@@ -77,16 +109,22 @@ body {
             "nav     nav"
             "imgLeft rightContent"
             "footer      footer";
-        }
+    }
+} */
+
+@media screen and (max-width: 774px) {
+    .login {
+        background: linear-gradient(to left, rgb(84, 164, 255) 40%, transparent 60%);
+    }
 }
 
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
     body {
         background-color: blueviolet;
     }
 }
 
-@media (prefers-color-scheme: light) {
+@media screen and (prefers-color-scheme: light) {
     body {
         background-color: rgb(84, 164, 255);
     }
@@ -98,19 +136,18 @@ a:link {
 }
 
 a:hover {
-    color:lime;
+    color: lime;
 }
 
 a:visited {
-    color:black;
+    color: black;
 }
 
 a:active {
     color: blue;
 }
 
-.theFooter {
+/* .theFooter {
     height: 5vh;
     text-align: center;
-}
-
+} */
