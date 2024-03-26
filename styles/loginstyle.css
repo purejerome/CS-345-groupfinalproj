@@ -58,6 +58,7 @@ body {
     padding: 0px;
     margin: 0px;
 }
+
 .wrapper {
     display: grid;
     gap: 20px;

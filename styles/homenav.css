@@ -14,7 +14,14 @@ header {
     border-style: solid;
 }
 
-#left-side form input {
+#right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+input {
     width: 70%;
     height: 3rem;
     margin: 1rem 0;
