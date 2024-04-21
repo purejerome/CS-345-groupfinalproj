@@ -20,6 +20,9 @@ animeAPI.then(response => response.json())
             let h3 = div.querySelector('h3');
             img.src = x.node.main_picture.medium;
             h3.textContent = x.node.alternative_titles.en;
+            div.addEventListener('click', () => {
+                window.location = basedAniURL + x.node.id;
+            });
             if (count < 5) {
                 let insert = document.querySelector('#a1');
                 insert.appendChild(div);
