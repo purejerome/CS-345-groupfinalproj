@@ -40,3 +40,91 @@ animeAPI.then(response => response.json())
 
     })
     .catch(console.error);
+
+const moviesURL = 'https://imdb-top-100-movies.p.rapidapi.com/';
+const optionsM = {
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': 'cd7ddf795dmsh355454f99e9b4ccp1e0eb7jsn61a06f02bec7',
+        'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com'
+    }
+};
+
+const moviesAPI = fetch(moviesURL, optionsM);
+
+moviesAPI.then(response => response.json())
+    .then(movies => {
+        console.log('here');
+        console.log(movies);
+        for (let x = 0; x < 15; x++) {
+            let container = document.querySelector('#temp').content.cloneNode(true);
+            let div = container.querySelector('.contentHolder');
+            let img = div.querySelector('img');
+            let h3 = div.querySelector('h3');
+
+            const workingData = movies[x];
+
+            img.src = workingData.image;
+            h3.textContent = workingData.title;
+            div.addEventListener('click', () => {
+                window.location = workingData.imdb_link;
+            });
+            if (x < 5) {
+                let insert = document.querySelector('#m1');
+                insert.appendChild(div);
+            }
+            else if (x < 10) {
+                let insert = document.querySelector('#m2');
+                insert.appendChild(div);
+            }
+            else {
+                let insert = document.querySelector('#m3');
+                insert.appendChild(div);
+            }
+        }
+    });
+
+const showsURL = 'https://imdb-top-100-movies.p.rapidapi.com/series/';
+const optionsS = {
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': 'cd7ddf795dmsh355454f99e9b4ccp1e0eb7jsn61a06f02bec7',
+        'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com'
+    }
+};
+
+const showsAPI = fetch(showsURL, optionsS);
+
+showsAPI.then(response => response.json())
+    .then(shows => {
+        console.log('here');
+        console.log(shows);
+        for (let x = 0; x < 16; x++) {
+            if (x != 13) {
+                let container = document.querySelector('#temp').content.cloneNode(true);
+                let div = container.querySelector('.contentHolder');
+                let img = div.querySelector('img');
+                let h3 = div.querySelector('h3');
+
+                const workingData = shows[x];
+
+                img.src = workingData.image;
+                h3.textContent = workingData.title;
+                div.addEventListener('click', () => {
+                    window.location = workingData.imdb_link;
+                });
+                if (x < 5) {
+                    let insert = document.querySelector('#s1');
+                    insert.appendChild(div);
+                }
+                else if (x < 10) {
+                    let insert = document.querySelector('#s2');
+                    insert.appendChild(div);
+                }
+                else {
+                    let insert = document.querySelector('#s3');
+                    insert.appendChild(div);
+                }
+            }
+        }
+    });
