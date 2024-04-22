@@ -25,14 +25,23 @@ animeAPI.then(response => response.json())
             });
             if (count < 5) {
                 let insert = document.querySelector('#a1');
+                if (count == 3 || count == 4) {
+                    div.classList.add('hide');
+                }
                 insert.appendChild(div);
             }
             else if (count < 10) {
                 let insert = document.querySelector('#a2');
+                if (count == 8 || count == 9) {
+                    div.classList.add('hide');
+                }
                 insert.appendChild(div);
             }
             else {
                 let insert = document.querySelector('#a3');
+                if (count == 13 || count == 14) {
+                    div.classList.add('hide');
+                }
                 insert.appendChild(div);
             }
             count++;
@@ -71,14 +80,23 @@ moviesAPI.then(response => response.json())
             });
             if (x < 5) {
                 let insert = document.querySelector('#m1');
+                if (x == 3 || x == 4) {
+                    div.classList.add('hide');
+                }
                 insert.appendChild(div);
             }
             else if (x < 10) {
                 let insert = document.querySelector('#m2');
+                if (x == 8 || x == 9) {
+                    div.classList.add('hide');
+                }
                 insert.appendChild(div);
             }
             else {
                 let insert = document.querySelector('#m3');
+                if (x == 13 || x == 14) {
+                    div.classList.add('hide');
+                }
                 insert.appendChild(div);
             }
         }
@@ -115,14 +133,23 @@ showsAPI.then(response => response.json())
                 });
                 if (x < 5) {
                     let insert = document.querySelector('#s1');
+                    if (x == 3 || x == 4) {
+                        div.classList.add('hide');
+                    }
                     insert.appendChild(div);
                 }
                 else if (x < 10) {
                     let insert = document.querySelector('#s2');
+                    if (x == 8 || x == 9) {
+                        div.classList.add('hide');
+                    }
                     insert.appendChild(div);
                 }
                 else {
                     let insert = document.querySelector('#s3');
+                    if (x == 14 || x == 15) {
+                        div.classList.add('hide');
+                    }
                     insert.appendChild(div);
                 }
             }

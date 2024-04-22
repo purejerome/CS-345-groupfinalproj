@@ -90,43 +90,12 @@ main {
     text-align: center;
 }
 
-/* .imageLeft,
-.login {
-    height: 90vh;
-} */
-
-
-/* .theFooter {
-    background-color: aquamarine;
-    padding: 0px;
-    margin: 0px;
-} */
-
-/* .wrapper {
-    display: grid;
-    gap: 20px;
-    grid-template-areas:
-        "nav"
-        "rightContent"
-        "imgLeft"
-        "footer";
-} */
-
-/* @media (min-width: 375px) {
-    .wrapper {
-        grid-template-columns: 40% 60%;
-        grid-gap: 0px;
-        grid-template-areas:
-            "nav     nav"
-            "imgLeft rightContent"
-            "footer      footer";
-    }
-} */
 @media screen and (max-height: 778px) {
-    .login form{
+    .login form {
         margin-left: 19rem;
     }
 }
+
 @media screen and (max-width: 778px) {
     @media screen and (prefers-color-scheme: dark) {
         .login {
