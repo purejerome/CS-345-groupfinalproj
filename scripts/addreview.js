@@ -1,4 +1,32 @@
-document.getElementById('review-form').addEventListener('submit', function (event) {
+window.addEventListener('load', () => {
+  if (localStorage.getItem("reviews") != null && localStorage.getItem("reviews") != "") {
+    let array = JSON.parse(localStorage.getItem("reviews"));
+    for (let x of array) {
+      const temp = document.querySelector('#temp2').content.cloneNode(true);
+      const container = temp.querySelector('.profile-container');
+      const title = temp.querySelector('.heading');
+      const img = temp.querySelector('.img-container img');
+      const figcap = temp.querySelector('.description');
+
+      const paragraphContent = x.description;
+      const imageUrl = x.image;
+      const titleContent = x.title;
+
+      if (titleContent != "") {
+        title.textContent = titleContent;
+      }
+      if (paragraphContent != "") {
+        figcap.textContent = paragraphContent;
+      }
+
+      img.src = imageUrl;
+
+      document.getElementById('review-box').appendChild(container);
+    }
+  }
+});
+
+document.getElementById('review-form').addEventListener('submit', async function (event) {
   event.preventDefault(); // Prevent form submission
 
   // Get paragraph content and image URL from form
@@ -24,16 +52,43 @@ document.getElementById('review-form').addEventListener('submit', function (even
 
   // Check if image URL is provided
   if ((imageUrl != null) && (/\.(jpe?g|png|gif)$/i.test(imageUrl.name))) {
-    const reader = new FileReader();
-    reader.readAsDataURL(imageUrl);
-    reader.addEventListener('load', () => {
-      img.src = reader.result;
-      img.alt = 'Image';
-    });
+    img.src = await setIMG(imageUrl);
+    img.alt = 'Image';
   }
   else {
     img.src = '../images/missing.png';
+    img.alt = 'Image';
   }
+
+  function setIMG(imgU) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.addEventListener('load', () => {
+        resolve(reader.result);
+        console.log(reader.result);
+      });
+      reader.addEventListener('error', () => {
+        resolve(reader.error);
+      });
+      reader.readAsDataURL(imgU);
+    });
+  }
+
+  //Create an array of objects to store the reviews in.
+
+  let array = [];
+  let obj = {
+    title: titleContent,
+    image: img.src,
+    description: paragraphContent
+  }
+
+  if (localStorage.getItem("reviews") != null && localStorage.getItem("reviews") != "") {
+    array = JSON.parse(localStorage.getItem("reviews"));
+  }
+  array.push(obj);
+  localStorage.setItem("reviews", JSON.stringify(array));
+
 
   // Append paragraph to content div
   document.getElementById('review-box').appendChild(container);
