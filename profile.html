@@ -16,7 +16,7 @@
       <input type="search" placeholder="Search">
       <nav>
         <a href="index.html">Home</a>
-        <a href="watch">Watch List</a>
+        <a href="reviews.html">Reviews</a>
         <a href="profile.html">Profile</a>
         <a href="about.html">About</a>
       </nav>
@@ -35,6 +35,7 @@
     </div>
     <div id="content">
       <h3>Your Reviews:</h3>
+      <div id="review-box"></div>
     </div>
     <div id="reviewform">
       <form id="review-form">
@@ -42,12 +43,21 @@
         <input type="text" id="title-content" name="title-content"><br>
         <label for="review-content">Review Content:</label><br>
         <textarea id="review-content" name="review-content" rows="4" cols="50"></textarea><br>
-        <label for="image-url">Image URL:</label><br>
-        <input type="text" id="image-url" name="image-url"><br>
+        <label for="image-url">Image:</label><br>
+        <input type="file" id="image-url" name="image-url"><br>
         <button type="submit" value="Add Review">Add Review</button>
       </form>
     </div>
   </main>
+  <template id="temp2">
+    <div class="profile-container">
+      <h4 class="heading">N/A</h4>
+      <figure class="img-container">
+        <img src="N/A" alt="">
+        <figcaption class="description">N/A</figcaption>
+      </figure>
+    </div>
+  </template>
   <script src="scripts/addreview.js"></script>
 </body>
 
