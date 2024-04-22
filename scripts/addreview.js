@@ -23,6 +23,7 @@ window.addEventListener('load', () => {
 
       document.getElementById('review-box').appendChild(container);
     }
+    document.getElementById('hide').classList.add('hidden');
   }
 });
 
