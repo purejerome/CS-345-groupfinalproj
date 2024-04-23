@@ -23,9 +23,9 @@ window.addEventListener('load', () => {
 
       document.getElementById('review-box').appendChild(container);
     }
-    document.getElementById('hide').classList.add('hidden');
-    document.getElementById('review-box').classList.add('hidden');
   }
+  document.getElementById('hide').classList.toggle('hidden');
+  document.getElementById('review-box').classList.toggle('hidden');
 });
 
 document.getElementById('review-form').addEventListener('submit', async function (event) {
