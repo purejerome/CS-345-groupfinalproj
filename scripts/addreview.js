@@ -59,7 +59,8 @@ document.getElementById('review-form').addEventListener('submit', async function
     img.alt = 'Image';
   }
   else {
-    img.src = '../images/missing.png';
+    img.src = 'images/missing.png';
+    console.log(img.src);
     img.alt = 'Image';
   }
 
