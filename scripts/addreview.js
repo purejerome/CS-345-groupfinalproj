@@ -1,4 +1,5 @@
 window.addEventListener('load', () => {
+  document.getElementById('review-box').classList.toggle('hidden');
   if (localStorage.getItem("reviews") != null && localStorage.getItem("reviews") != "") {
     let array = JSON.parse(localStorage.getItem("reviews"));
     for (let x of array) {
