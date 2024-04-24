@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  backdrop-filter: blur(20px) saturate(160%);
 }
 
 main {
@@ -20,13 +21,21 @@ figure {
 
 .profile-container {
   flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-container button {
+  margin: 0 auto;
 }
 
 .profile-container figure {
-  height: 70%;
-  width: 80%;
-  max-width: 80%;
-  max-height: 70%;
+  height: 40vh;
+  width: 15vw;
+  max-width: 15vw;
+  max-height: 40vh;
+  cursor: pointer;
 }
 
 .profile-container figure figcaption {
@@ -38,6 +47,10 @@ figure {
 }
 
 .img-container {
+  width: 90%;
+  height: 90%;
+  max-width: 90%;
+  max-height: 90%;
   margin: auto;
 }
 

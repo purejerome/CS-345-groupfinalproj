@@ -7,6 +7,7 @@ window.addEventListener('load', () => {
       const container = temp.querySelector('.profile-container');
       const title = temp.querySelector('.heading');
       const img = temp.querySelector('.img-container img');
+      const fig = temp.querySelector('.img-container');
       const deleteButton = document.createElement('button');
 
       const paragraphContent = x.description;
@@ -28,6 +29,11 @@ window.addEventListener('load', () => {
         console.log('different' + JSON.stringify(x));
         arrayRet = arrayD.filter((item) => JSON.stringify(item) != JSON.stringify(x));
         localStorage.setItem("reviews", JSON.stringify(arrayRet));
+      });
+
+      fig.addEventListener('click', () => {
+        sessionStorage.setItem('reviewLoad', JSON.stringify(x));
+        window.location = 'reviews.html';
       });
 
       container.appendChild(deleteButton);
@@ -53,6 +59,7 @@ document.getElementById('review-form').addEventListener('submit', async function
   const container = temp.querySelector('.profile-container');
   const title = temp.querySelector('.heading');
   const img = temp.querySelector('.img-container img');
+  const fig = temp.querySelector('.img-container');
   const deleteButton = document.createElement('button');
   let desc = "N/A";
 
@@ -121,6 +128,11 @@ document.getElementById('review-form').addEventListener('submit', async function
   });
 
   container.appendChild(deleteButton);
+
+  fig.addEventListener('click', () => {
+    sessionStorage.setItem('reviewLoad', JSON.stringify(obj));
+    window.location = 'reviews.html';
+  });
 
 
   // Append paragraph to content div

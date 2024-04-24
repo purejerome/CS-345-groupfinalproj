@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watch List</title>
     <link rel="stylesheet" href="styles/default.css">
-    <link rel="stylesheet" href="styles/watchlist.css">
     <link rel="stylesheet" href="styles/homenav.css">
+    <link rel="stylesheet" href="styles/reviewpagestyle.css">
+    <title>Review</title>
 </head>
 
 <body>
@@ -16,7 +16,6 @@
             <input type="search" placeholder="Search">
             <nav>
                 <a href="index.html">Home</a>
-                <a href="reviews.html">Reviews</a>
                 <a href="profile.html">Profile</a>
                 <a href="about.html">About</a>
             </nav>
@@ -26,9 +25,20 @@
             <a href="report.html">Report</a>
         </div>
     </header>
+    <h1>Complete Review</h1>
     <main>
-
+        <div class="loading-overlay" id="hide">
+            <div class="loading-message">Loading...</div>
+        </div>
+        <div class="hidden" id="left">
+            <img src="N/A" alt="Review Image">
+        </div>
+        <div class="hidden" id="right">
+            <h2>N/A</h2>
+            <p>N/A</p>
+        </div>
     </main>
+    <script src="scripts/reviewpagecode.js"></script>
 </body>
 
 </html>
