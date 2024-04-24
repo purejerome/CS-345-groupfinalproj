@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
       const container = temp.querySelector('.profile-container');
       const title = temp.querySelector('.heading');
       const img = temp.querySelector('.img-container img');
-      const figcap = temp.querySelector('.description');
+      const deleteButton = document.createElement('button');
 
       const paragraphContent = x.description;
       const imageUrl = x.image;
@@ -16,11 +16,21 @@ window.addEventListener('load', () => {
       if (titleContent != "") {
         title.textContent = titleContent;
       }
-      if (paragraphContent != "") {
-        figcap.textContent = paragraphContent;
-      }
 
       img.src = imageUrl;
+
+      deleteButton.textContent = "Delete";
+      deleteButton.addEventListener('click', (event) => {
+        parentParent = event.target.parentNode.parentNode;
+        parentParent.removeChild(event.target.parentNode);
+
+        let arrayD = JSON.parse(localStorage.getItem("reviews"));
+        console.log('different' + JSON.stringify(x));
+        arrayRet = arrayD.filter((item) => JSON.stringify(item) != JSON.stringify(x));
+        localStorage.setItem("reviews", JSON.stringify(arrayRet));
+      });
+
+      container.appendChild(deleteButton);
 
       document.getElementById('review-box').appendChild(container);
     }
@@ -43,14 +53,15 @@ document.getElementById('review-form').addEventListener('submit', async function
   const container = temp.querySelector('.profile-container');
   const title = temp.querySelector('.heading');
   const img = temp.querySelector('.img-container img');
-  const figcap = temp.querySelector('.description');
+  const deleteButton = document.createElement('button');
+  let desc = "N/A";
 
   // Add content to paragraph
   if (titleContent != "") {
     title.textContent = titleContent;
   }
   if (paragraphContent != "") {
-    figcap.textContent = paragraphContent;
+    desc = paragraphContent;
   }
 
   // Check if image URL is provided
@@ -78,20 +89,38 @@ document.getElementById('review-form').addEventListener('submit', async function
     });
   }
 
+
   //Create an array of objects to store the reviews in.
 
   let array = [];
   let obj = {
     title: titleContent,
     image: img.src,
-    description: paragraphContent
+    description: paragraphContent,
   }
+  console.log('out' + JSON.stringify(obj));
 
   if (localStorage.getItem("reviews") != null && localStorage.getItem("reviews") != "") {
     array = JSON.parse(localStorage.getItem("reviews"));
   }
   array.push(obj);
   localStorage.setItem("reviews", JSON.stringify(array));
+
+  // make a delete button
+  deleteButton.textContent = "Delete";
+  deleteButton.addEventListener('click', (event) => {
+    parentParent = event.target.parentNode.parentNode;
+    parentParent.removeChild(event.target.parentNode);
+
+    let arrayD = JSON.parse(localStorage.getItem("reviews"));
+    console.log('og' + JSON.stringify(obj));
+    console.log(arrayD);
+    arrayRet = arrayD.filter((item) => JSON.stringify(item) != JSON.stringify(obj));
+    console.log(arrayRet);
+    localStorage.setItem("reviews", JSON.stringify(arrayRet));
+  });
+
+  container.appendChild(deleteButton);
 
 
   // Append paragraph to content div
