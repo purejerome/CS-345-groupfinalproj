@@ -85,3 +85,19 @@ figure {
 .hidden {
   display: none;
 }
+
+#title-content {
+  width: 50%;
+  border-radius: 30px;
+}
+
+#review-content {
+  width: 40%;
+  resize: none;
+}
+
+#image-url {
+  width: 30%;
+  margin-left: 0;
+  margin-right: 0;
+}
