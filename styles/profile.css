@@ -9,16 +9,6 @@ main {
   padding: 50px;
 }
 
-/* #profile {
-  display: block;
-  text-align: center;
-}
-
-figure {
-  flex: 1;
-  padding: 10px;
-} */
-
 .profile-container {
   flex-basis: 20%;
   display: flex;
@@ -31,10 +21,6 @@ figure {
 }
 
 .profile-container figure {
-  height: 40vh;
-  width: 15vw;
-  max-width: 15vw;
-  max-height: 40vh;
   cursor: pointer;
 }
 
@@ -47,10 +33,8 @@ figure {
 }
 
 .img-container {
-  width: 90%;
-  height: 90%;
-  max-width: 90%;
-  max-height: 90%;
+  width: 80%;
+  height: 80%;
   margin: auto;
 }
 
