@@ -54,7 +54,7 @@ const moviesURL = 'https://imdb-top-100-movies.p.rapidapi.com/';
 const optionsM = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': 'cd7ddf795dmsh355454f99e9b4ccp1e0eb7jsn61a06f02bec7',
+        'X-RapidAPI-Key': '2217e2e604msh04c9bde89a381ecp1c9df5jsn3fb06968f7e1',
         'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com'
     }
 };
@@ -106,7 +106,7 @@ const showsURL = 'https://imdb-top-100-movies.p.rapidapi.com/series/';
 const optionsS = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': 'cd7ddf795dmsh355454f99e9b4ccp1e0eb7jsn61a06f02bec7',
+        'X-RapidAPI-Key': '2217e2e604msh04c9bde89a381ecp1c9df5jsn3fb06968f7e1',
         'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com'
     }
 };
