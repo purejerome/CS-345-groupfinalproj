@@ -78,8 +78,13 @@ main {
 
 #review-content {
   width: 40%;
-  background-color: black;
+  background-color: rgba(255, 255, 255, 0.393);
+  border: none;
   resize: none;
+}
+
+#review-content:focus {
+  outline-color: blue;
 }
 
 #image-url {

@@ -80,3 +80,37 @@ figcaption:hover span {
     text-align: center;
     margin: 1rem;
 }
+
+@media screen and (max-width: 644px) {
+    figure {
+        height: 50vh;
+    }
+
+    #heading h1 {
+        font-size: 2.8rem;
+    }
+
+    #heading span {
+        font-size: 1.4rem;
+    }
+
+    #end-section p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (hover: hover) and (pointer: coarse) {
+    figcaption:hover {
+        opacity: 1;
+        backdrop-filter: blur(0.7px) saturate(90%);
+    }
+
+    figcaption span {
+        transform: translateY(25px);
+        transition: transform 0.5s;
+    }
+
+    figcaption:hover span {
+        transform: translateY(0px);
+    }
+}
