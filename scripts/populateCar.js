@@ -50,7 +50,7 @@ animeAPI.then(response => response.json())
     })
     .catch(console.error);
 
-const moviesURL = 'https://imdb-top-100-movies.p.rapidapi.com/';
+const moviesURL = 'https://corsproxy.io/?' + encodeURIComponent('https://imdb-top-100-movies.p.rapidapi.com/');
 const optionsM = {
     method: 'GET',
     headers: {
@@ -100,9 +100,10 @@ moviesAPI.then(response => response.json())
                 insert.appendChild(div);
             }
         }
-    });
+    })
+    .catch(console.error);
 
-const showsURL = 'https://imdb-top-100-movies.p.rapidapi.com/series/';
+const showsURL = 'https://corsproxy.io/?' + encodeURIComponent('https://imdb-top-100-movies.p.rapidapi.com/series/');
 const optionsS = {
     method: 'GET',
     headers: {
@@ -154,4 +155,5 @@ showsAPI.then(response => response.json())
                 }
             }
         }
-    });
+    })
+    .catch(console.error);
