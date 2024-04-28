@@ -25,7 +25,6 @@ function toggleVis(event) {
     }
 }
 function leftClick(event) {
-    event.preventDefault();
     const cSection = event.target.closest('.carousel').querySelector('.cSection');
     cSection.scrollBy({
         left: -cSection.clientWidth,
@@ -33,7 +32,6 @@ function leftClick(event) {
     });
 }
 function rightClick(event) {
-    event.preventDefault();
     const cSection = event.target.closest('.carousel').querySelector('.cSection');
     cSection.scrollBy({
         left: cSection.clientWidth,
