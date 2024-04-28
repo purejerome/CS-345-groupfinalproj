@@ -47,6 +47,15 @@ document.getElementById('file-input').addEventListener('change', (event) => {
                 console.log(res);
                 const decodedResult = decodeURIComponent(res);
                 const parsedResult = JSON.parse(res);
+                if (parsedResult.title === undefined) {
+                    throw new Error();
+                }
+                if (parsedResult.image === undefined) {
+                    throw new Error();
+                }
+                if (parsedResult.description === undefined) {
+                    throw new Error();
+                }
                 sessionStorage.setItem('reviewLoad', JSON.stringify(parsedResult));
                 setArea();
             }
