@@ -64,4 +64,5 @@ document.getElementById('file-input').addEventListener('change', (event) => {
             }
         });
     }
+    imported.value = '';
 });

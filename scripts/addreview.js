@@ -1,8 +1,17 @@
-window.addEventListener('load', () => {
+function populate() {
   document.getElementById('review-box').classList.toggle('hidden');
   if (localStorage.getItem("reviews") != null && localStorage.getItem("reviews") != "") {
     let array = JSON.parse(localStorage.getItem("reviews"));
     for (let x of array) {
+      if (x.description === undefined) {
+        throw new Error();
+      }
+      if (x.image === undefined) {
+        throw new Error();
+      }
+      if (x.title === undefined) {
+        throw new Error();
+      }
       const temp = document.querySelector('#temp2').content.cloneNode(true);
       const container = temp.querySelector('.profile-container');
       const title = temp.querySelector('.heading');
@@ -41,6 +50,10 @@ window.addEventListener('load', () => {
       document.getElementById('review-box').appendChild(container);
     }
   }
+};
+
+window.addEventListener('load', () => {
+  populate();
   document.getElementById('hide').classList.toggle('hidden');
   document.getElementById('review-box').classList.toggle('hidden');
 });
@@ -179,4 +192,49 @@ document.getElementById("edit-button").addEventListener('submit', function () {
   form.appendChild(button);
 
   document.getElementById('about-you-paragraph').appendChild(form);
-})
+});
+
+document.getElementById('export').addEventListener('click', () => {
+  if (localStorage.getItem('reviews') != null && localStorage.getItem('reviews') != "") {
+    let state = JSON.parse(localStorage.getItem('reviews'));
+    let aString = JSON.stringify(state);
+    const encode = encodeURIComponent(aString);
+    const urlString = 'data:application/json;charset=utf-8,' + encode;
+    let link = document.createElement('a');
+    link.href = urlString;
+    link.download = 'review.json';
+    link.textContent = 'download';
+
+    link.click();
+  }
+});
+
+document.getElementById('import').addEventListener('click', () => {
+  document.getElementById('file-input').click();
+});
+
+document.getElementById('file-input').addEventListener('change', (event) => {
+
+  const imported = document.getElementById('file-input');
+  if (imported.files.length == 1) {
+    let array = imported.files;
+    const reader = new FileReader();
+    reader.readAsText(array[0]);
+    reader.addEventListener('load', (ev) => {
+      let res = ev.target.result;
+      try {
+        const decodedResult = decodeURIComponent(res);
+        const parsedResult = JSON.parse(res);
+        console.log(parsedResult);
+        localStorage.setItem('reviews', JSON.stringify(parsedResult));
+        document.getElementById('review-box').innerHTML = "";
+        console.log(parsedResult.length);
+        populate();
+      }
+      catch (error) {
+        console.log(error);
+      }
+    });
+  }
+  imported.value = '';
+});
