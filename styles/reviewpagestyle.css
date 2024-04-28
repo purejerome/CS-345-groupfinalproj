@@ -39,6 +39,25 @@ main {
     display: none;
 }
 
+#top-head {
+    display: flex;
+}
+
+#top-head h1 {
+    width: 50%;
+}
+
+#top-head #buttons-holder {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttons-holder button {
+    margin: 0.6rem;
+}
+
 @media screen and (max-width: 500px) {
     main {
         min-height: 100vh;

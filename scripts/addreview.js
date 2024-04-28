@@ -101,11 +101,13 @@ document.getElementById('review-form').addEventListener('submit', async function
 
   let array = [];
   let obj = {
-    title: titleContent,
+    title: title.textContent,
     image: img.src,
-    description: paragraphContent,
+    description: desc,
   }
   console.log('out' + JSON.stringify(obj));
+  console.log(title.textContent);
+  console.log(desc);
 
   if (localStorage.getItem("reviews") != null && localStorage.getItem("reviews") != "") {
     array = JSON.parse(localStorage.getItem("reviews"));

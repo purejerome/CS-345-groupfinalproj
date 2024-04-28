@@ -25,7 +25,14 @@
             <a href="report.html">Report</a>
         </div>
     </header>
-    <h1>Complete Review</h1>
+    <div id="top-head">
+        <h1>Complete Review</h1>
+        <div id="buttons-holder">
+            <button type="button" id="import">Import</button>
+            <input type="file" id="file-input" style="display: none;" accept=".json">
+            <button type="button" id="export">Export</button>
+        </div>
+    </div>
     <main>
         <div class="loading-overlay" id="hide">
             <div class="loading-message">Loading...</div>
