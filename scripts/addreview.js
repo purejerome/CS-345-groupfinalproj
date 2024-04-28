@@ -142,6 +142,11 @@ document.getElementById('review-form').addEventListener('submit', async function
   document.getElementById('review-form').reset();
 });
 
+document.querySelector('#reset-button-box button').addEventListener('click', () => {
+  localStorage.setItem("reviews", "");
+  document.getElementById('review-box').innerHTML = "";
+});
+
 document.getElementById("edit-button").addEventListener('submit', function () {
   // Remove the edit button
   document.getElementById('edit-button').toggleAttribute();
