@@ -1,13 +1,15 @@
 const apiKey = 'ecc0c35c'; // Replace with your actual OMDB API key
 
 async function searchMovies(query) {
-  const response = await fetch(`http://www.omdbapi.com/?s=${query}&apikey=${apiKey}`);
+  const url = 'https://corsproxy.io/?' + encodeURIComponent(`http://www.omdbapi.com/?s=${query}&apikey=${apiKey}`);
+  const response = await fetch(url);
   const data = await response.json();
   return data.Search || [];
 }
 
 async function fetchMovieDetails(movieId) {
-  const response = await fetch(`http://www.omdbapi.com/?i=${movieId}&apikey=${apiKey}`);
+  const url = 'https://corsproxy.io/?' + encodeURIComponent(`http://www.omdbapi.com/?i=${movieId}&apikey=${apiKey}`)
+  const response = await fetch(url);
   const data = await response.json();
   return data;
 }
@@ -49,7 +51,7 @@ async function displayMovieTitles(query) {
   });
 }
 
-document.getElementById("searchInput").addEventListener("input", function() {
+document.getElementById("searchInput").addEventListener("input", function () {
   const query = this.value.trim();
   if (query) {
     displayMovieTitles(query);
