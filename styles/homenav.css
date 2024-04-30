@@ -12,6 +12,7 @@ header {
     flex-grow: 1;
     border-width: 2px;
     border-style: solid;
+    color: black;
 }
 
 #right-side {
@@ -19,6 +20,7 @@ header {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    color: black;
 }
 
 input {

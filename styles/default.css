@@ -1,6 +1,7 @@
     @media screen and (prefers-color-scheme: dark) {
         body {
-            background-color: rgb(138, 43, 226);
+            background-color: rgb(47, 5, 87);
+            color: gold;
         }
     }
 
