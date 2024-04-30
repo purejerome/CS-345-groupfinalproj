@@ -38,9 +38,11 @@ function register(event) {
             if (emailButton.checked && emailText.length > 0) {
                 let userInfo = [username, password, emailText];
                 console.log(userInfo);
+                window.location.href = "../final-project-nick-jerome-nicky/index.html";
             } else if (phoneButton.checked && phoneText.length > 0) {
                 let userInfo = [username, password, phoneText];
                 console.log(userInfo);
+                window.location.href = "../final-project-nick-jerome-nicky/index.html";
             } else {
                 alert("Either email or phone must content in them");
             }
@@ -51,4 +53,16 @@ function register(event) {
         alert("Passwords do not match, please reenter them");l
     }
 
+}
+
+function login(event) {
+    event.preventDefault();
+    let username = document.getElementById("user").value;
+    let password = document.getElementById("pass").value;
+    if (username.length > 0 && password.length > 0) {
+        let userInfo = [username, password];
+        window.location.href = "../final-project-nick-jerome-nicky/index.html";
+    } else {
+        alert("Both user and password fields must have content in them");
+    }
 }

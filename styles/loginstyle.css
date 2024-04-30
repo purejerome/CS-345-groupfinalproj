@@ -19,7 +19,8 @@ main {
 
 @media screen and (prefers-color-scheme: dark) {
     .login {
-        background: linear-gradient(to left, blueviolet 40%, transparent 100%);
+        background: linear-gradient(to left, rgb(47, 5, 87) 40%, transparent 100%);
+        color: gold;
     }
 }
 
@@ -99,7 +100,8 @@ main {
 @media screen and (max-width: 778px) {
     @media screen and (prefers-color-scheme: dark) {
         .login {
-            background: linear-gradient(to bottom, blueviolet 40%, transparent 100%);
+            background: linear-gradient(to bottom, rgb(47, 5, 87) 40%, transparent 100%);
+            color: gold;
         }
     }
 
@@ -124,7 +126,7 @@ main {
 }
 
 a:link {
-    color: red;
+    color: gold;
 
 }
 
@@ -133,7 +135,7 @@ a:hover {
 }
 
 a:visited {
-    color: black;
+    color: gold;
 }
 
 a:active {
