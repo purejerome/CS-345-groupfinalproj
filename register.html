@@ -15,15 +15,19 @@
         </section>
         <section class="login">
             <form action="#" method="get">
-                <p>New Username = <input type="text" id="user" name="userName" placeholder="Enter Username"></p>
-                <p>Create Password = <input type="password" id="pass" name="passWord" placeholder="Enter password"></p>
-                <p>Confirm Password = <input type="password" id="confirmpass" name="confirmPass" placeholder="Confirm Password"></p>
-                <input type="radio" id="ContactEmail" name="contact" value="email" onclick="registerRadio()">
-                <label for="ContactEmail">Email</label>
-                <input type="radio" id="ContactPhone" name="contact" value="phone" onclick="registerRadio()">
-                <label for="ContactPhone">Phone</label>
-                <p id="emailText">Contact Email = <input type="text" id="email" name="email" placeholder="Enter your email!"></p>
-                <p id="phoneText">Contact Phone Number = <input type="text" id="phone" name="phone" placeholder="Enter your phone number!"></p>
+                <h1>Login to the Website!</h1>
+                <p>New Username</p>
+                <input type="text" id="user" name="userName" placeholder="Enter Username">
+                <p>Create Password</p>
+                <input type="password" id="pass" name="passWord" placeholder="Enter password">
+                <p>Confirm Password</p>
+                <input type="password" id="confirmpass" name="confirmPass" placeholder="Confirm Password">
+                <label>Email <input type="radio" id="ContactEmail" name="contact" value="email" onclick="registerRadio()" checked></label>
+                <label>Phone <input type="radio" id="ContactPhone" name="contact" value="phone" onclick="registerRadio()"></label>
+                <p id="emailText">Contact Email</p>
+                <input type="text" id="email" name="email" placeholder="Enter your email!">
+                <p id="phoneText" style="display: none">Contact Phone Number</p>
+                <input type="text" id="phone" name="phone" placeholder="Enter your phone number!" style="display: none">
                 <button type="submit" onclick="register(event)">Get Reviewing!</button>
             </form>
         </section>
