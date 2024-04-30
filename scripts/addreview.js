@@ -226,10 +226,12 @@ document.getElementById('file-input').addEventListener('change', (event) => {
         const decodedResult = decodeURIComponent(res);
         const parsedResult = JSON.parse(res);
         console.log(parsedResult);
-        localStorage.setItem('reviews', JSON.stringify(parsedResult));
-        document.getElementById('review-box').innerHTML = "";
-        console.log(parsedResult.length);
-        populate();
+        if (Array.isArray(parsedResult)) {
+          localStorage.setItem('reviews', JSON.stringify(parsedResult));
+          document.getElementById('review-box').innerHTML = "";
+          console.log(parsedResult.length);
+          populate();
+        }
       }
       catch (error) {
         console.log(error);

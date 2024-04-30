@@ -17,9 +17,19 @@ main {
     flex-direction: column;
 }
 
+form {
+    position: relative;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+
+}
+
 @media screen and (prefers-color-scheme: dark) {
     .login {
-        background: linear-gradient(to left, blueviolet 40%, transparent 100%);
+        background: linear-gradient(to left, rgb(47, 5, 87) 40%, transparent 100%);
+        color: gold;
     }
 }
 
@@ -36,6 +46,7 @@ main {
     right: 0;
     width: 150vh;
     padding: 0;
+    padding-left: 10vw;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -83,12 +94,24 @@ main {
 } */
 
 .login form button {
-    margin-left: 100px;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.login form h1 {
+    text-align: center;
 }
 
 .login form {
-    text-align: center;
+    text-align: left;
 }
+
+.login form p {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
 
 @media screen and (max-height: 778px) {
     .login form {
@@ -99,7 +122,8 @@ main {
 @media screen and (max-width: 778px) {
     @media screen and (prefers-color-scheme: dark) {
         .login {
-            background: linear-gradient(to bottom, blueviolet 40%, transparent 100%);
+            background: linear-gradient(to bottom, rgb(47, 5, 87) 40%, transparent 100%);
+            color: gold;
         }
     }
 
@@ -124,7 +148,7 @@ main {
 }
 
 a:link {
-    color: red;
+    color: gold;
 
 }
 
@@ -133,7 +157,7 @@ a:hover {
 }
 
 a:visited {
-    color: black;
+    color: gold;
 }
 
 a:active {
