@@ -62,5 +62,7 @@ function login(event) {
     if (username.length > 0 && password.length > 0) {
         let userInfo = [username, password];
         window.location.href = "../final-project-nick-jerome-nicky/index.html";
+    } else {
+        alert("Both user and password fields must have content in them");
     }
 }
