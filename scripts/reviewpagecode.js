@@ -56,8 +56,10 @@ document.getElementById('file-input').addEventListener('change', (event) => {
                 if (parsedResult.description === undefined) {
                     throw new Error();
                 }
-                sessionStorage.setItem('reviewLoad', JSON.stringify(parsedResult));
-                setArea();
+                if (!Array.isArray(parsedResult)) {
+                    sessionStorage.setItem('reviewLoad', JSON.stringify(parsedResult));
+                    setArea();
+                }
             }
             catch (error) {
                 console.log(error);
