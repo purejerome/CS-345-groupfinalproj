@@ -1,7 +1,3 @@
-console.log("Good Evening People of the Great Country of the United States of America I hope you are all ready for a glorious day on this fine Earth that we find ourselves Residing In!")
-
-
-
 function registerRadio() {
     let phoneButton = document.getElementById("ContactPhone");
     let emailButton = document.getElementById("ContactEmail");
@@ -66,3 +62,8 @@ function login(event) {
         alert("Both user and password fields must have content in them");
     }
 }
+
+document.getElementById('loginform').addEventListener('submit', login);
+document.getElementById('ContactEmail').addEventListener('click', registerRadio);
+document.getElementById('ContactPhone').addEventListener('click', registerRadio);
+document.getElementById('registerform').addEventListener('submit', register);

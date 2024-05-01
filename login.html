@@ -16,14 +16,14 @@
             <a href="https://store.steampowered.com/"><span>invis</span></a>
         </section>
         <section class="login">
-            <form action="#" method="get">
+            <form action="#" method="get" id="loginform">
                 <h1>Login to the Website!</h1>
-                <p>User Name</p>
-                    <input type="text" id="user" name="userName" placeholder="enter username">
-                <p>Password</p>
+                <label for="user">User Name</label>
+                <input type="text" id="user" name="userName" placeholder="enter username">
+                <label for="pass">Password</label>
                 <input type="password" id="pass" name="passWord" placeholder="enter password">
-                <button type="submit" onclick="login(event)">Get Reviewing!</button>
-                <p>Don't have an account with us? <a href="register.html">Click Me!</a></p>
+                <button type="submit">Get Reviewing!</button>
+                <p>Don't have an account with us? <a href="register.html">Register!</a></p>
             </form>
         </section>
     </main>

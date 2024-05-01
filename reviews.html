@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/default.css">
     <link rel="stylesheet" href="styles/homenav.css">
     <link rel="stylesheet" href="styles/reviewpagestyle.css">
+    <link rel="stylesheet" href="styles/buttons.css">
     <title>Review</title>
 </head>
 
@@ -29,6 +30,7 @@
         <h1>Complete Review</h1>
         <div id="buttons-holder">
             <button type="button" id="import">Import</button>
+            <label for="file-input" style="display: none;">nothing</label>
             <input type="file" id="file-input" style="display: none;" accept=".json">
             <button type="button" id="export">Export</button>
         </div>
@@ -38,7 +40,7 @@
             <div class="loading-message">Loading...</div>
         </div>
         <div class="hidden" id="left">
-            <img src="N/A" alt="Review Image">
+            <img src="images/missing.png" alt="">
         </div>
         <div class="hidden" id="right">
             <h2>N/A</h2>

@@ -41,6 +41,12 @@
         font-family: 'Courier New', Courier, monospace;
     }
 
+    h1 {
+        font-size: 5rem;
+        margin-left: 1rem;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
     a {
         color: white;
         text-decoration: none;
@@ -53,4 +59,10 @@
     a:hover {
         color: rgba(255, 255, 255, 0.434);
         text-decoration: underline;
+    }
+
+    @media screen and (max-width: 708px) {
+        h1 {
+            font-size: 3rem;
+        }
     }

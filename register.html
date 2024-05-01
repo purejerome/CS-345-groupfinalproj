@@ -14,21 +14,32 @@
             <a href="https://store.steampowered.com/"><span>invs</span></a>
         </section>
         <section class="login">
-            <form action="#" method="get">
+            <form action="#" method="get" id="registerform">
                 <h1>Login to the Website!</h1>
-                <p>New Username</p>
+                <label for="user">New Username</label>
                 <input type="text" id="user" name="userName" placeholder="Enter Username">
-                <p>Create Password</p>
+                <label for="pass">Create Password</label>
                 <input type="password" id="pass" name="passWord" placeholder="Enter password">
-                <p>Confirm Password</p>
-                <input type="password" id="confirmpass" name="confirmPass" placeholder="Confirm Password">
-                <label>Email <input type="radio" id="ContactEmail" name="contact" value="email" onclick="registerRadio()" checked></label>
-                <label>Phone <input type="radio" id="ContactPhone" name="contact" value="phone" onclick="registerRadio()"></label>
-                <p id="emailText">Contact Email</p>
-                <input type="text" id="email" name="email" placeholder="Enter your email!">
-                <p id="phoneText" style="display: none">Contact Phone Number</p>
-                <input type="text" id="phone" name="phone" placeholder="Enter your phone number!" style="display: none">
-                <button type="submit" onclick="register(event)">Get Reviewing!</button>
+                <label for="confirmpass">Confirm Password</label>
+                <input type="password" id="confirmpass" name="confirmPass"
+                    placeholder="Confirm Password">
+                <div>
+                    <fieldset>
+                        <legend>Choose your preferred contact:</legend>
+                        <label for="ContactEmail">Email</label>
+                        <input type="radio" id="ContactEmail" name="contact" value="email" checked>
+                        <label for="ContactPhone">Phone</label>
+                        <input type="radio" id="ContactPhone" name="contact" value="phone">
+                    </fieldset>
+                </div>
+                <div>
+                </div>
+                <label id="emailText" for="email">Contact Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email!">
+                <label id="phoneText" for="phone" style="display: none">Contact Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="###-###-####"
+                    style="display: none" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <button type="submit">Get Reviewing!</button>
             </form>
         </section>
     </main>

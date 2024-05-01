@@ -44,11 +44,11 @@ main {
 }
 
 #top-head h1 {
-    width: 50%;
+    width: 80%;
 }
 
 #top-head #buttons-holder {
-    width: 50%;
+    width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -81,6 +81,24 @@ figcaption:hover span {
     margin: 1rem;
 }
 
+#end-section h2 {
+    font-size: 2rem;
+    width: 70vw;
+    text-align: center;
+    margin: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#end-section a {
+    color: black;
+    text-decoration: underline;
+}
+
+#end-section a:visited {
+    color: black;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 644px) {
     figure {
         height: 50vh;

@@ -27,15 +27,10 @@
     </div>
   </header>
   <main>
-    <div>
-      <h2>Your Profile</h2>
-      <h3>About You:</h3>
-      <div id="about-you-paragraph"></div>
-      <button id="edit-button" type="submit" value="Edit">Edit</button>
-    </div>
+    <h1>Your Reviews</h1>
     <div id="content">
-      <h3>Your Reviews:</h3>
       <button type="button" id="import">Import</button>
+      <label for="file-input" style="display: none;">noting</label>
       <input type="file" id="file-input" style="display: none;" accept=".json">
       <button type="button" id="export">Export</button>
       <div class="loading-overlay" id="hide">
@@ -62,7 +57,7 @@
     <div class="profile-container">
       <h4 class="heading">N/A</h4>
       <figure class="img-container">
-        <img src="N/A" alt="">
+        <img src="images/missing.png" alt="">
       </figure>
     </div>
   </template>
