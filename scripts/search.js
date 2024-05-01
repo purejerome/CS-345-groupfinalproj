@@ -20,6 +20,7 @@ async function displayMovieDetails(movieId) {
   const movieDetailsContainer = document.getElementById("movieDetails");
   movieDetailsContainer.innerHTML = `
     <h2>${movieDetails.Title}</h2>
+    <img src="${movieDetails.Poster}" alt="${movieDetails.Title} Poster">
     <p><strong>Year:</strong> ${movieDetails.Year}</p>
     <p><strong>Rated:</strong> ${movieDetails.Rated}</p>
     <p><strong>Released:</strong> ${movieDetails.Released}</p>
@@ -30,7 +31,6 @@ async function displayMovieDetails(movieId) {
     <p><strong>Plot:</strong> ${movieDetails.Plot}</p>
     <p><strong>IMDb Rating:</strong> ${movieDetails.imdbRating}</p>
     <p><strong>IMDb Votes:</strong> ${movieDetails.imdbVotes}</p>
-    <img src="${movieDetails.Poster}" alt="${movieDetails.Title} Poster">
   `;
 }
 
@@ -45,17 +45,29 @@ async function displayMovieTitles(query) {
     button.textContent = movie.Title;
     button.addEventListener("click", () => {
       displayMovieDetails(movie.imdbID);
+      document.getElementById("movieList").classList.add('hidden');
     });
     listItem.appendChild(button);
     movieList.appendChild(listItem);
   });
 }
 
+document.getElementById("searchInput").addEventListener("focus", function () {
+  if (document.getElementById("movieList").classList.contains('hidden')) {
+    document.getElementById("movieList").classList.remove('hidden');
+  }
+});
+
 document.getElementById("searchInput").addEventListener("input", function () {
   const query = this.value.trim();
   if (query) {
+    if (document.getElementById("movieList").classList.contains('hidden')) {
+      document.getElementById("movieList").classList.remove('hidden');
+    }
     displayMovieTitles(query);
   } else {
     document.getElementById("movieList").innerHTML = "";
   }
 });
+
+

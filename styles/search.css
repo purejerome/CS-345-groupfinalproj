@@ -1,0 +1,32 @@
+ul {
+    list-style-type: none;
+}
+
+button {
+    margin: 0.2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+#movieDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(20px) saturate(160%);
+}
+
+img {
+    display: block;
+    width: 20%;
+}
+
+p {
+    width: 50%;
+    font-size: 1.4vw;
+}
+
+h2 {
+    font-size: 3vw;
+}
