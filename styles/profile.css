@@ -83,6 +83,11 @@ main {
   resize: none;
 }
 
+#num {
+  width: 5vw;
+  min-width: 60px;
+}
+
 #review-content:focus {
   outline-color: blue;
 }
