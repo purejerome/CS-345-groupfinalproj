@@ -23,7 +23,7 @@ function populate() {
       const paragraphContent = x.description;
       const imageUrl = x.image;
       const titleContent = x.title;
-      const rate = x.rating;
+      const rate = x.rating + "/10";
 
       if (titleContent != "") {
         title.textContent = titleContent;
@@ -71,7 +71,7 @@ document.getElementById('review-form').addEventListener('submit', async function
   const paragraphContent = document.getElementById('review-content').value;
   const imageUrl = document.getElementById('image-url').files[0];
   const titleContent = document.getElementById('title-content').value;
-  const ratingVal = document.getElementById('num').value;
+  let ratingVal = document.getElementById('num').value;
 
   //Get template
 
@@ -92,9 +92,11 @@ document.getElementById('review-form').addEventListener('submit', async function
     desc = paragraphContent;
   }
 
-  if (ratingVal) {
-    rating.textContent = ratingVal + "/10";
+  if (!ratingVal) {
+    ratingVal = 0;
   }
+  rating.textContent = ratingVal + "/10";
+  console.log("number: " + ratingVal)
 
   // Check if image URL is provided
   if ((imageUrl != null) && (/\.(jpe?g|png|gif)$/i.test(imageUrl.name))) {
@@ -129,7 +131,7 @@ document.getElementById('review-form').addEventListener('submit', async function
     title: title.textContent,
     image: img.src,
     description: desc,
-    rating: rating.textContent
+    rating: ratingVal
   }
   console.log('out' + JSON.stringify(obj));
   console.log(title.textContent);
