@@ -46,6 +46,8 @@
         <input type="text" id="title-content" name="title-content"><br>
         <label for="review-content">Review Content:</label><br>
         <textarea id="review-content" name="review-content" rows="4" cols="50"></textarea><br>
+        <label for="num">Rating:</label><br>
+        <input type="number" id="num" name="num" min="0" max="10"><br>
         <label for="image-url">Image:</label><br>
         <input type="file" id="image-url" name="image-url"><br>
         <button type="submit" value="Add Review">Add Review</button>
@@ -58,6 +60,7 @@
       <figure class="img-container">
         <img src="images/missing.png" alt="">
       </figure>
+      <p>N/A</p>
     </div>
   </template>
   <script src="scripts/addreview.js"></script>

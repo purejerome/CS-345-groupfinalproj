@@ -2,7 +2,7 @@ function setArea() {
     let img = document.querySelector('img');
     let title = document.querySelector('h2');
     let desc = document.querySelector('p');
-    if (sessionStorage.getItem('reviewLoad') != "" && sessionStorage.getItem('reviewLoad') != "") {
+    if (sessionStorage.getItem('reviewLoad') != null && sessionStorage.getItem('reviewLoad') != "") {
         let obj = JSON.parse(sessionStorage.getItem('reviewLoad'));
         img.src = obj.image;
         title.textContent = obj.title;

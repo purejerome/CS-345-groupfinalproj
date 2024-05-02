@@ -17,14 +17,20 @@ function populate() {
       const title = temp.querySelector('.heading');
       const img = temp.querySelector('.img-container img');
       const fig = temp.querySelector('.img-container');
+      const rating = temp.querySelector('p');
       const deleteButton = document.createElement('button');
 
       const paragraphContent = x.description;
       const imageUrl = x.image;
       const titleContent = x.title;
+      const rate = x.rating;
 
       if (titleContent != "") {
         title.textContent = titleContent;
+      }
+
+      if (rate) {
+        rating.textContent = rate;
       }
 
       img.src = imageUrl;
@@ -65,6 +71,7 @@ document.getElementById('review-form').addEventListener('submit', async function
   const paragraphContent = document.getElementById('review-content').value;
   const imageUrl = document.getElementById('image-url').files[0];
   const titleContent = document.getElementById('title-content').value;
+  const ratingVal = document.getElementById('num').value;
 
   //Get template
 
@@ -73,6 +80,7 @@ document.getElementById('review-form').addEventListener('submit', async function
   const title = temp.querySelector('.heading');
   const img = temp.querySelector('.img-container img');
   const fig = temp.querySelector('.img-container');
+  const rating = temp.querySelector('p');
   const deleteButton = document.createElement('button');
   let desc = "N/A";
 
@@ -82,6 +90,10 @@ document.getElementById('review-form').addEventListener('submit', async function
   }
   if (paragraphContent != "") {
     desc = paragraphContent;
+  }
+
+  if (ratingVal) {
+    rating.textContent = ratingVal + "/10";
   }
 
   // Check if image URL is provided
@@ -117,6 +129,7 @@ document.getElementById('review-form').addEventListener('submit', async function
     title: title.textContent,
     image: img.src,
     description: desc,
+    rating: rating.textContent
   }
   console.log('out' + JSON.stringify(obj));
   console.log(title.textContent);
@@ -208,4 +221,17 @@ document.getElementById('file-input').addEventListener('change', (event) => {
     });
   }
   imported.value = '';
+});
+
+document.getElementById('num').addEventListener('keydown', function (event) {
+  if (event.key == "-") {
+    event.preventDefault();
+  }
+});
+
+
+document.getElementById('num').addEventListener('input', function (event) {
+  if (event.target.value > 10) {
+    event.target.value = 10;
+  }
 });
