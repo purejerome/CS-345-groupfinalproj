@@ -62,8 +62,11 @@ function login(event) {
         alert("Both user and password fields must have content in them");
     }
 }
-
-document.getElementById('loginform').addEventListener('submit', login);
-document.getElementById('ContactEmail').addEventListener('click', registerRadio);
-document.getElementById('ContactPhone').addEventListener('click', registerRadio);
-document.getElementById('registerform').addEventListener('submit', register);
+if (document.getElementById('loginform')) {
+    document.getElementById('loginform').addEventListener('submit', login);
+}
+if (document.getElementById('registerform')) {
+    document.getElementById('ContactEmail').addEventListener('click', registerRadio);
+    document.getElementById('ContactPhone').addEventListener('click', registerRadio);
+    document.getElementById('registerform').addEventListener('submit', register);
+}
