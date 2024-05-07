@@ -66,6 +66,7 @@ if (document.getElementById('loginform')) {
     document.getElementById('loginform').addEventListener('submit', login);
 }
 if (document.getElementById('registerform')) {
+    window.addEventListener('load', registerRadio);
     document.getElementById('ContactEmail').addEventListener('click', registerRadio);
     document.getElementById('ContactPhone').addEventListener('click', registerRadio);
     document.getElementById('registerform').addEventListener('submit', register);
