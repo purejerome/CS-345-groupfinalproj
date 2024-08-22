@@ -19,7 +19,7 @@ animeAPI
       let img = div.querySelector("img");
       let h3 = div.querySelector("h3");
       img.src = x.image;
-      h3.textContent = x.alternativeTitles[0];
+      h3.textContent = x.title;
       div.addEventListener("click", () => {
         window.location = basedAniURL + x.id;
       });
