@@ -21,7 +21,7 @@ animeAPI
       img.src = x.image;
       h3.textContent = x.title;
       div.addEventListener("click", () => {
-        window.location = basedAniURL + x.id;
+        window.location = x.link; // <<<< hey this was changed yall ok????
       });
       if (count < 5) {
         let insert = document.querySelector("#a1");
